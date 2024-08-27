@@ -125,3 +125,25 @@ document.addEventListener("DOMContentLoaded", function() {
     // Initialize chart with default values
     updateChart();
 });
+
+
+
+    // Function to update results based on input values
+    function updateResults(vo2, lt1, lt2) {
+        document.getElementById('vo2-pace').textContent = formatPace(vo2);
+        document.getElementById('lt1-pace').textContent = formatPace(lt1);
+        document.getElementById('lt2-pace').textContent = formatPace(lt2);
+    }
+
+    // Function to format pace in min:sec
+    function formatPace(pace) {
+        const minutes = Math.floor(pace / 60);
+        const seconds = Math.round(pace % 60);
+        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    }
+
+    // Example usage with dummy values
+    updateResults(240, 300, 360);
+
+
+    

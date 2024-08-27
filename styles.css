@@ -89,28 +89,37 @@ h1 {
     margin-bottom: 20px;
     font-size: 1.2rem; /* Slightly larger font size for instructions */
     color: #007bff;
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+    text-align: center;
 }
 
 .instructions h2 {
     margin-bottom: 10px;
-    font-size: 1.5rem; /* Larger font size for the section heading */
+    font-size: 1.2rem; /* Slightly smaller font size for the section heading */
     font-weight: bold;
     display: flex;
-    align-items: center;
-    justify-content: center; /* Center horizontally */
+    flex-direction: column; /* Stack heading and tooltip vertically */
+    align-items: center; /* Center items horizontally */
     white-space: nowrap; /* Prevent text from wrapping to a new line */
+}
+
+.instructions h2 .tooltip {
+    font-size: 1rem; /* Smaller font size for the question mark */
+    margin-top: 5px; /* Space between text and tooltip */
 }
 
 .tooltip {
     position: relative;
     display: inline-block;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Adjust font size for the question mark */
     color: #333;
     background: #e9ecef; /* Light gray background for the circle */
     border-radius: 50%; /* Circular shape */
-    width: 24px;
-    height: 24px;
+    width: 20px; /* Smaller size */
+    height: 20px; /* Smaller size */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,4 +246,30 @@ canvas {
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #ddd;
+}
+
+
+
+.results-section {
+    border-left: 2px solid #ddd; /* Vertical line between results and chart sections */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Light gray background for results section */
+}
+
+.results-section h2 {
+    font-size: 1.5rem; /* Font size for the heading */
+    margin-bottom: 15px; /* Space below the heading */
+    color: #007bff; /* Blue color for the heading */
+}
+
+#results-summary p {
+    font-size: 1.2rem; /* Font size for summary text */
+    margin-bottom: 10px; /* Space between lines */
+    color: #333; /* Dark color for readability */
+}
+
+#results-summary span {
+    font-weight: bold; /* Bold text for the values */
+    color: #007bff; /* Blue color for the values */
 }
