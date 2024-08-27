@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Pace Chart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Running Pace Chart</h1>
+            <div class="summary">
+                Adjust the sliders or input boxes to see how different paces compare as a percentage of your VO2 pace.
+            </div>
+        </header>
+        <div class="input-group">
+            <label for="vo2Input">VO2 (min:sec):</label>
+            <input type="text" id="vo2Input" value="3:30">
+            <input type="range" id="vo2Slider" min="60" max="600" value="210">
+        </div>
+        <div class="input-group">
+            <label for="lt2Input">LT2 (min:sec):</label>
+            <input type="text" id="lt2Input" value="4:00">
+            <input type="range" id="lt2Slider" min="60" max="600" value="240">
+        </div>
+        <div class="input-group">
+            <label for="lt1Input">LT1 (min:sec):</label>
+            <input type="text" id="lt1Input" value="5:00">
+            <input type="range" id="lt1Slider" min="60" max="600" value="300">
+        </div>
+        <canvas id="chart" width="600" height="400"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

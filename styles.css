@@ -1,0 +1,117 @@
+/* Reset some default browser styles */
+body, h1, label, input {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* White background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #ffffff; /* White background for the container */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+header {
+    background-color: #007bff; /* Blue background for the header */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.summary {
+    margin: 10px 0;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: calc(100% - 16px); /* Adjust width for text input */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="range"] {
+    width: calc(100% - 16px); /* Adjust width for range input */
+    margin-top: 10px;
+    -webkit-appearance: none; /* Remove default styles */
+    appearance: none;
+    height: 8px;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff; /* White thumb */
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff; /* White thumb */
+    cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff; /* White thumb */
+    cursor: pointer;
+}
+
+/* Specific colors for sliders */
+#vo2Slider {
+    background: linear-gradient(to right, #d32f2f, #d32f2f);
+}
+
+#lt2Slider {
+    background: linear-gradient(to right, #ff9800, #ff9800);
+}
+
+#lt1Slider {
+    background: linear-gradient(to right, #4caf50, #4caf50);
+}
+
+#sAndCSlider {
+    background: linear-gradient(to right, #2196f3, #2196f3);
+}
+
+canvas {
+    margin-top: 20px;
+}
