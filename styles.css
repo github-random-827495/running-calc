@@ -75,8 +75,11 @@ h1 {
 .chart-section {
     flex: 2;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
     padding: 20px;
+    background-color: #ffffff; /* Ensure background matches */
+    border-radius: 6px; /* Match border radius */
 }
 
 .input-section {
@@ -242,7 +245,6 @@ canvas {
 .results-section {
     border-left: 2px solid #ddd;
 }
-
 
 .results {
     margin-bottom: 20px;

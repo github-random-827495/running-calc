@@ -40,23 +40,15 @@ document.addEventListener("DOMContentLoaded", function() {
         options: {
             scales: {
                 x: {
-                    title: {
-                        display: true,
-                        text: 'Percentage (%)'
-                    },
-                    min: 0,
-                    max: 100
+                    display: false, // Hide x-axis text
+                    grid: {
+                        display: false // Hide x-axis gridlines
+                    }
                 },
                 y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: 'Measurement (sec)'
-                    },
-                    ticks: {
-                        callback: function(value) {
-                            return secondsToPace(value);
-                        }
+                    display: false, // Hide y-axis text
+                    grid: {
+                        display: false // Hide y-axis gridlines
                     }
                 }
             },
