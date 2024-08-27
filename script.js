@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 borderColor: '#000000', // Black line
                 borderWidth: 2,
                 fill: false,
-                pointRadius: [12, 10, 10, 10], // Larger dots
+                pointRadius: [10, 10, 10, 10], // Larger dots
                 pointBackgroundColor: ['#2196f3', '#4caf50', '#ff9800', '#d32f2f'], // Blue for S&C, Green for LT1, Orange for LT2, Red for VO2
                 pointBorderColor: '#ffffff',
                 // Add labels directly on the chart
