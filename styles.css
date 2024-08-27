@@ -68,6 +68,8 @@ h1 {
     flex: 1;
     padding: 20px;
     box-sizing: border-box;
+    background-color: #ffffff; /* Match background color */
+    border-radius: 6px; /* Match border radius */
 }
 
 .chart-section {
@@ -79,10 +81,6 @@ h1 {
 
 .input-section {
     border-right: 2px solid #ddd; /* Vertical line between input and results sections */
-}
-
-.results-section {
-    border-left: 2px solid #ddd; /* Vertical line between results and chart sections */
 }
 
 .instructions {
@@ -241,34 +239,38 @@ canvas {
     max-height: 100%;
 }
 
-#results {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-
-
 .results-section {
-    border-left: 2px solid #ddd; /* Vertical line between results and chart sections */
-    padding: 20px;
-    box-sizing: border-box;
+    border-left: 2px solid #ddd;
 }
 
-.results-section h2 {
-    font-size: 1.5rem; /* Font size for the heading */
-    margin-bottom: 15px; /* Space below the heading */
-    color: #007bff; /* Blue color for the heading */
+
+.results {
+    margin-bottom: 20px;
+    font-size: 1.2rem; /* Slightly larger font size for instructions */
+    color: #007bff;
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+    text-align: center;
 }
 
-#results-summary p {
-    font-size: 1.2rem; /* Font size for summary text */
+.results h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem; /* Slightly smaller font size for the section heading */
+    font-weight: bold;
+    display: flex;
+    flex-direction: column; /* Stack heading and tooltip vertically */
+    align-items: center; /* Center items horizontally */
+    white-space: nowrap; /* Prevent text from wrapping to a new line */
+}
+
+.results p {
+    font-size: 1.2rem; /* Font size for result text */
     margin-bottom: 10px; /* Space between lines */
     color: #333; /* Dark color for readability */
 }
 
-#results-summary span {
+.results span {
     font-weight: bold; /* Bold text for the values */
     color: #007bff; /* Blue color for the values */
 }
