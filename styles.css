@@ -254,7 +254,6 @@ canvas {
     border-left: 2px solid #ddd; /* Vertical line between results and chart sections */
     padding: 20px;
     box-sizing: border-box;
-    background-color: #f9f9f9; /* Light gray background for results section */
 }
 
 .results-section h2 {
