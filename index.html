@@ -7,29 +7,43 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>Running Pace Chart</h1>
+    </header>
+    <div class="summary">
+        <p>Use this calculator to understand your running gaps and where you need to focus on next.</p>
+    </div>
     <div class="container">
-        <header>
-            <h1>Running Pace Chart</h1>
-            <div class="summary">
-                Adjust the sliders or input boxes to map out your LT1, LT2 and VO2.
+        <div class="column-wrapper">
+            <div class="input-section">
+                <div class="instructions">
+                    <h2>Enter Running Paces <span class="tooltip">&#x3f;<span class="tooltiptext">Use the sliders or input boxes to set your VO2, LT1, and LT2 paces. The chart will update automatically.</span></span></h2>
+                </div>
+                <div class="input-group">
+                    <label for="vo2Input">VO2 (min:sec):</label>
+                    <input type="text" id="vo2Input" value="3:30">
+                    <input type="range" id="vo2Slider" min="60" max="600" value="210">
+                </div>
+                <div class="input-group">
+                    <label for="lt2Input">LT2 (min:sec):</label>
+                    <input type="text" id="lt2Input" value="4:00">
+                    <input type="range" id="lt2Slider" min="60" max="600" value="240">
+                </div>
+                <div class="input-group">
+                    <label for="lt1Input">LT1 (min:sec):</label>
+                    <input type="text" id="lt1Input" value="5:00">
+                    <input type="range" id="lt1Slider" min="60" max="600" value="300">
+                </div>
             </div>
-        </header>
-        <div class="input-group">
-            <label for="vo2Input">VO2 (min:sec):</label>
-            <input type="text" id="vo2Input" value="3:30">
-            <input type="range" id="vo2Slider" min="60" max="600" value="210">
+            <div class="chart-section">
+                <canvas id="chart" width="600" height="400"></canvas>
+            </div>
+            <div class="results-section">
+                <div id="results">
+                    <!-- Results will be displayed here -->
+                </div>
+            </div>
         </div>
-        <div class="input-group">
-            <label for="lt2Input">LT2 (min:sec):</label>
-            <input type="text" id="lt2Input" value="4:00">
-            <input type="range" id="lt2Slider" min="60" max="600" value="240">
-        </div>
-        <div class="input-group">
-            <label for="lt1Input">LT1 (min:sec):</label>
-            <input type="text" id="lt1Input" value="5:00">
-            <input type="range" id="lt1Slider" min="60" max="600" value="300">
-        </div>
-        <canvas id="chart" width="600" height="400"></canvas>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
