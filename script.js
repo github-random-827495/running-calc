@@ -96,6 +96,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // Update chart data
         chart.data.datasets[0].data = [sAndCPercent, lt1Percent, lt2Percent, vo2Percent];
         chart.update();
+
+        // Update results summary
+        updateResults(vo2Pace, lt1Pace, lt2Pace);
     }
 
     // Function to synchronize slider and input
@@ -124,26 +127,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Initialize chart with default values
     updateChart();
-});
-
-
 
     // Function to update results based on input values
-    function updateResults(vo2, lt1, lt2) {
-        document.getElementById('vo2-pace').textContent = formatPace(vo2);
-        document.getElementById('lt1-pace').textContent = formatPace(lt1);
-        document.getElementById('lt2-pace').textContent = formatPace(lt2);
+    function updateResults(vo2Pace, lt1Pace, lt2Pace) {
+        // Remove any previous advice
+        const resultsSummary = document.getElementById('results-summary');
+        resultsSummary.innerHTML = '';
+
+        const vo2Lt2Diff = Math.abs(vo2Pace - lt2Pace);
+        const lt1Lt2Diff = Math.abs(lt1Pace - lt2Pace);
+
+        // Display advice based on conditions
+        if (vo2Lt2Diff <= 60) { // Threshold of 60 seconds (adjust as needed)
+            resultsSummary.innerHTML = '<p class="advice">Your VO2 Max pace and LT2 pace are too close. Focus on improving your VO2 Max.</p>';
+        } else if (lt1Lt2Diff <= 60) { // Threshold of 60 seconds (adjust as needed)
+            resultsSummary.innerHTML = '<p class="advice">Your LT1 pace and LT2 pace are too close. Focus on improving your LT2 pace.</p>';
+        }
     }
-
-    // Function to format pace in min:sec
-    function formatPace(pace) {
-        const minutes = Math.floor(pace / 60);
-        const seconds = Math.round(pace % 60);
-        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-    }
-
-    // Example usage with dummy values
-    updateResults(240, 300, 360);
-
-
-    
+});
