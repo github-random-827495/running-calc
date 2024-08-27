@@ -276,3 +276,80 @@ canvas {
     font-weight: bold; /* Bold text for the values */
     color: #007bff; /* Blue color for the values */
 }
+/* Style for VO2 slider thumb */
+#vo2Slider::-webkit-slider-thumb {
+    width: 20px; /* Smaller width */
+    height: 20px; /* Smaller height */
+    background: #d32f2f; /* Red thumb for VO2 */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+    -webkit-appearance: none; /* Remove default appearance */
+}
+
+#vo2Slider::-moz-range-thumb {
+    width: 20px; /* Smaller width */
+    height: 20px; /* Smaller height */
+    background: #d32f2f; /* Red thumb for VO2 */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+}
+
+#vo2Slider::-ms-thumb {
+    width: 20px; /* Smaller width */
+    height: 20px; /* Smaller height */
+    background: #d32f2f; /* Red thumb for VO2 */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+}
+
+/* Style for LT2 slider thumb */
+#lt2Slider::-webkit-slider-thumb {
+    width: 20px; /* Smaller width */
+    height: 20px; /* Smaller height */
+    background: #ff9800; /* Orange thumb for LT2 */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+    -webkit-appearance: none; /* Remove default appearance */
+}
+
+#lt2Slider::-moz-range-thumb {
+    width: 20px; /* Smaller width */
+    height: 20px; /* Smaller height */
+    background: #ff9800; /* Orange thumb for LT2 */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+}
+
+#lt2Slider::-ms-thumb {
+    width: 20px; /* Smaller width */
+    height: 20px; /* Smaller height */
+    background: #ff9800; /* Orange thumb for LT2 */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+}
+
+/* Style for LT1 slider thumb */
+#lt1Slider::-webkit-slider-thumb {
+    width: 20px; /* Smaller width */
+    height: 20px; /* Smaller height */
+    background: #4caf50; /* Green thumb for LT1 */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+    -webkit-appearance: none; /* Remove default appearance */
+}
+
+#lt1Slider::-moz-range-thumb {
+    width: 20px; /* Smaller width */
+    height: 20px; /* Smaller height */
+    background: #4caf50; /* Green thumb for LT1 */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+}
+
+#lt1Slider::-ms-thumb {
+    width: 20px; /* Smaller width */
+    height: 20px; /* Smaller height */
+    background: #4caf50; /* Green thumb for LT1 */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+}
