@@ -266,12 +266,6 @@ canvas {
     white-space: nowrap; /* Prevent text from wrapping to a new line */
 }
 
-.results p {
-    font-size: 1.2rem; /* Font size for result text */
-    margin-bottom: 10px; /* Space between lines */
-    color: #333; /* Dark color for readability */
-}
-
 .results span {
     font-weight: bold; /* Bold text for the values */
     color: #007bff; /* Blue color for the values */
@@ -352,4 +346,19 @@ canvas {
     background: #4caf50; /* Green thumb for LT1 */
     border-radius: 50%; /* Circular shape */
     cursor: pointer;
+}
+
+/* Style for advice paragraph inside results-summary */
+#results-summary p.advice {
+    font-size: 1.2rem; /* Adjust the font size as needed */
+    color: #000000; /* Blue color for the advice text */
+    background-color: #e9ecef; /* Light gray background for readability */
+    border: 1px solid #ddd; /* Light border around the advice box */
+    border-radius: 6px; /* Rounded corners */
+    padding: 10px; /* Padding inside the advice box */
+    margin: 10px 0; /* Margin above and below the advice box */
+    display: inline-block; /* Fit content width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-weight: bold;
+    text-align: center;
 }
