@@ -32,14 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 borderColor: '#000000', // Black line
                 borderWidth: 2,
                 fill: false,
-                pointRadius: [10, 10, 10, 10], // Larger dots
-                pointBackgroundColor: ['#2196f3', '#4caf50', '#ff9800', '#d32f2f'], // Blue for S&C, Green for LT1, Orange for LT2, Red for VO2
+                pointRadius: [12, 10, 10, 10], // Larger dots
+                pointBackgroundColor: ['#2196f3', '#4caf50', '#ff9800', '#d32f2f'], // Colors for the points
                 pointBorderColor: '#ffffff',
-                // Add labels directly on the chart
-                pointLabelFontSize: 14,
-                pointLabelFontColor: '#333',
-                pointLabelFontFamily: 'Helvetica Neue, Arial, sans-serif',
-                pointLabelFontWeight: 'bold'
             }]
         },
         options: {
@@ -65,23 +60,22 @@ document.addEventListener("DOMContentLoaded", function() {
                     enabled: false // Disable tooltips
                 },
                 datalabels: {
-                    display: true, // Display labels
-                    formatter: function(value, context) {
-                        // Custom labels for each point
-                        const labels = ['S&C', 'LT1', 'LT2', 'VO2'];
-                        return labels[context.dataIndex];
-                    },
+                    display: true, // Display labels on the points
+                    align: 'top',
+                    anchor: 'end',
                     color: '#333',
                     font: {
                         size: 14,
                         weight: 'bold'
                     },
-                    anchor: 'end',
-                    align: 'top',
-                    offset: 10
+                    formatter: function(value, context) {
+                        const labels = ['S&C', 'LT1', 'LT2', 'VO2'];
+                        return labels[context.dataIndex]; // Custom labels for each point
+                    }
                 }
             }
-        }
+        },
+        plugins: [ChartDataLabels] // Add this line to register the datalabels plugin
     });
 
     // Function to update the chart based on pace inputs
