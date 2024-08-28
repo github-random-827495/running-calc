@@ -29,6 +29,17 @@ h1 {
     font-size: 2rem; /* Larger font size for the header */
 }
 
+h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem; /* Slightly smaller font size for the section heading */
+    font-weight: bold;
+    display: flex;
+    flex-direction: column; /* Stack heading and tooltip vertically */
+    align-items: center; /* Center items horizontally */
+    white-space: nowrap; /* Prevent text from wrapping to a new line */
+    color: #007bff;
+}
+
 .summary {
     width: 100%;
     max-width: 1200px;
@@ -45,6 +56,7 @@ h1 {
     color: #333; /* Darker color for readability */
 }
 
+/* styling for containers */
 .container {
     display: flex;
     flex-direction: column;
@@ -59,9 +71,119 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
+/* styling for column wrapper */
 .column-wrapper {
     display: flex;
     justify-content: space-between;
+}
+
+.estimator-distance-select, .estimator-race-input {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Match background color */
+    border-radius: 6px; /* Match border radius */
+}
+
+/* Style for a professional-looking button */
+button {
+    background-color: #007bff; /* Bootstrap Blue */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow */
+}
+
+/* Active state effect */
+button:active {
+    background-color: #004080; /* Even darker blue when pressed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow when pressed */
+    transform: translateY(2px); /* Slight movement down on click */
+}
+
+/* Focus state for accessibility */
+button:focus {
+    outline: 2px solid #0056b3; /* Focus outline with matching color */
+    outline-offset: 2px; /* Space between the outline and button */
+}
+
+
+
+/* Style for input-group to ensure elements are aligned */
+.estimator-distance-select-group {
+    margin-bottom: 10px;
+}
+
+/* Style for radio buttons and labels */
+.estimator-distance-select-group {
+    display: flex;
+    flex-direction: column; /* Stacks radio items vertically */
+}
+
+/* Style for each radio button and label pair */
+.estimator-distance-select-group input[type="radio"] {
+    margin-right: 5px; /* Space between radio button and label */
+}
+
+.estimator-distance-select-group label {
+    margin-bottom: 5px; /* Space between radio button rows */
+}
+
+.estimator-race-results {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Match background color */
+    border-radius: 6px; /* Match border radius */
+    text-align: center; /* Center text within the container */
+    margin: 0 auto; /* Center the container itself if it's a block-level element */
+}
+
+.estimator-race-results-output {
+    flex: 1;
+    min-width: 0; /* Ensures columns don't shrink too small */
+}
+
+/* Style for advice paragraph inside results-summary */
+#estimator-race-results-output p.result {
+    font-size: 1.2rem; /* Adjust the font size as needed */
+    color: #000000; /* Blue color for the advice text */
+    background-color: #e9ecef; /* Light gray background for readability */
+    border: 1px solid #ddd; /* Light border around the advice box */
+    border-radius: 6px; /* Rounded corners */
+    padding: 10px; /* Padding inside the advice box */
+    margin: 10px 0; /* Margin above and below the advice box */
+    display: inline-block; /* Fit content width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-weight: bold;
+    text-align: center;
+}
+
+.estimator-race-input {
+    text-align: center;
+}
+
+
+
+.chart-section {
+    flex: 2;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    padding: 20px;
+    background-color: #ffffff; /* Ensure background matches */
+    border-radius: 6px; /* Match border radius */
 }
 
 .input-section, .results-section {
@@ -70,6 +192,7 @@ h1 {
     box-sizing: border-box;
     background-color: #ffffff; /* Match background color */
     border-radius: 6px; /* Match border radius */
+
 }
 
 .chart-section {
@@ -82,9 +205,7 @@ h1 {
     border-radius: 6px; /* Match border radius */
 }
 
-.input-section {
-    border-right: 2px solid #ddd; /* Vertical line between input and results sections */
-}
+
 
 .instructions {
     margin-bottom: 20px;
@@ -361,4 +482,96 @@ canvas {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     font-weight: bold;
     text-align: center;
+}
+
+
+
+
+
+
+
+/* Ensure the container is displayed as flex */
+#pace-estimation-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add some spacing between columns */
+}
+
+/* Column wrapper style */
+.column-wrapper {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+/* Each column */
+.pace-estimation-input-section,
+.pace-estimation-results-section {
+    flex: 1;
+    min-width: 0; /* Ensures columns don't shrink too small */
+}
+
+
+
+/* Center the button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Space above the button */
+}
+
+/* Style for error message */
+#race-time-error {
+    color: red;
+    display: none;
+}
+
+/* Style for pace results */
+.pace-estimation-results {
+    margin-top: 10px;
+}
+
+.pace-estimation-results p {
+    margin: 5px 0; /* Space between result lines */
+}
+
+
+
+
+
+/* Common width for sections */
+.same-width {
+    width: 100%; /* Full width of the parent container */
+    max-width: 400px; /* Adjust as needed */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 20px;
+    background-color: #ffffff; /* White background for clarity */
+    border-radius: 6px; /* Match border radius */
+    border: 2px solid #ddd; /* Border to match other sections */
+}
+
+.column-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    gap: 20px; /* Space between columns */
+}
+
+.column-wrapper > .same-width {
+    flex: 1;
+    min-width: 0; /* Ensure columns don’t shrink too small */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px; /* Maximum width to ensure content doesn't stretch too much */
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ddd; /* Container border */
+    border-radius: 12px; /* Rounded corners */
+    background-color: #ffffff; /* White background for container */
+    margin-top: 20px; /* Gap between summary and container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }

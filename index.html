@@ -13,9 +13,58 @@
     <div class="summary">
         <p>Use this calculator to understand your running gaps and where you need to focus on next.</p>
     </div>
+
+    <!-- container for pace estimation -->
     <div class="container">
         <div class="column-wrapper">
-            <div class="input-section">
+            <!-- Column 1: Select Race Distance -->
+            <div class="estimator-distance-select same-width">
+                <h2>Select Your Race Distance</h2>
+                <br>
+                <div class="estimator-distance-select-group">
+                    <input type="radio" id="distance-5k" name="distance" value="5k">
+                    <label for="distance-5k">5K</label><br>
+                    <input type="radio" id="distance-10k" name="distance" value="10k">
+                    <label for="distance-10k">10K</label><br>
+                    <input type="radio" id="distance-half" name="distance" value="half">
+                    <label for="distance-half">Half Marathon</label><br>
+                    <input type="radio" id="distance-full" name="distance" value="full">
+                    <label for="distance-full">Full Marathon</label>
+                </div>
+            </div>
+
+            <!-- Column 2: Enter Recent Finish Time -->
+            <div class="estimator-race-input same-width">
+                <h2>Enter Your Recent Finish Time</h2>
+                <br>
+                <div class="estimator-race-input-group">
+                    <!-- <label for="race-time">Race Time (hh:mm:ss):</label> -->
+                    <input type="text" id="race-time" placeholder="HH:MM:SS">
+                    <span id="race-time-error" style="color: red; display: none;">Please enter time in hh:mm:ss format (e.g., 01:30:45).</span>
+                </div>
+                <br>
+                <!-- Centering the button with a container -->
+                <div class="button-container">
+                    <button id="calculate-paces">Calculate Paces</button>
+                </div>
+            </div>
+
+            <!-- Column 3: Pace Results -->
+            <div class="estimator-race-results same-width">
+                <h2>Estimated Paces</h2>
+                <br>
+                <div id="estimator-race-results-output" class="estimator-race-results">
+                    <p class="result">Estimated VO2 Pace: <span id="vo2-estimate"></span></p>
+                    <p class="result">Estimated LT2 Pace: <span id="lt2-estimate"></span></p>
+                    <p class="result">Estimated LT1 Pace: <span id="lt1-estimate"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="column-wrapper">
+            <div class="input-section same-width">
                 <div class="instructions">
                     <h2>Enter Running Paces <span class="tooltip">&#x3f;<span class="tooltiptext">Use the sliders or input boxes to set your VO2, LT1, and LT2 paces. The chart will update automatically.</span></span></h2>
                 </div>
@@ -35,10 +84,10 @@
                     <input type="range" id="lt1Slider" min="60" max="600" value="300">
                 </div>
             </div>
-            <div class="chart-section">
+            <div class="chart-section same-width">
                 <canvas id="chart" width="600" height="400"></canvas>
             </div>
-            <div class="results-section">
+            <div class="results-section same-width">
                 <div class="results">
                     <h2>Results Summary</h2>    
                 </div>
@@ -52,7 +101,5 @@
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-
-
 </body>
 </html>
