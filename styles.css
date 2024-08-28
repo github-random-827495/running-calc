@@ -40,7 +40,26 @@ h2 {
     color: #007bff;
 }
 
-.summary {
+.step-number {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #007bff; /* Adjust color as needed */
+    color: #ffffff;
+    font-weight: bold;
+    margin-right: 10px; /* Adjust the space between the circle and the text */
+    font-size: 16px; /* Adjust size as needed */
+    margin-bottom: 25px;
+}
+
+.step-title {
+    vertical-align: middle; /* Aligns the text vertically with the number */
+}
+
+.summary, .header-container {
     display: flex;
     flex-direction: column;
     width: 100%;

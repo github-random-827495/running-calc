@@ -16,10 +16,19 @@
 
     <!-- container for pace estimation -->
     <div class="container">
+        
+        <div class="header-container">
+            <h1>Run Pace Estimator</h1>
+            <p>Estimate your running paces based on your race distance and time.</p>
+        </div>
+        <br>
         <div class="column-wrapper">
             <!-- Column 1: Select Race Distance -->
             <div class="estimator-distance-select same-width">
-                <h2>Select Your Race Distance</h2>
+                <h2>
+                    <span class="step-number">1</span>
+                    <span class="step-title">Select Your Race Distance</span>
+                </h2>
                 <br>
                 <div class="estimator-distance-select-group">
                     <div class="distance-option">
@@ -44,7 +53,10 @@
 
             <!-- Column 2: Enter Recent Finish Time -->
             <div class="estimator-race-input same-width">
-                <h2>Enter Your Recent Finish Time</h2>
+                <h2>
+                    <span class="step-number">2</span>
+                    <span class="step-title">Enter Your Recent Finish Time</span>
+                </h2>
                 <br>
                 <div class="estimator-race-input-group">
                     <!-- <label for="race-time">Race Time (hh:mm:ss):</label> -->
@@ -60,7 +72,10 @@
 
             <!-- Column 3: Pace Results -->
             <div class="estimator-race-results same-width">
-                <h2>Estimated Paces</h2>
+                <h2>
+                    <span class="step-number">3</span>
+                    <span class="step-title">Estimated Paces</span>
+                </h2>
                 <br>
                 <div id="estimator-race-results-output" class="estimator-race-results">
                     <p class="result">Estimated VO2 Pace: <span id="vo2-estimate" class="vo2-color"></span></p>
