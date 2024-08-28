@@ -22,16 +22,25 @@
                 <h2>Select Your Race Distance</h2>
                 <br>
                 <div class="estimator-distance-select-group">
-                    <input type="radio" id="distance-5k" name="distance" value="5k">
-                    <label for="distance-5k">5K</label><br>
-                    <input type="radio" id="distance-10k" name="distance" value="10k">
-                    <label for="distance-10k">10K</label><br>
-                    <input type="radio" id="distance-half" name="distance" value="half">
-                    <label for="distance-half">Half Marathon</label><br>
-                    <input type="radio" id="distance-full" name="distance" value="full">
-                    <label for="distance-full">Full Marathon</label>
+                    <div class="distance-option">
+                        <input type="radio" id="distance-5k" name="distance" value="5k">
+                        <label for="distance-5k">5K</label>
+                    </div>
+                    <div class="distance-option">
+                        <input type="radio" id="distance-10k" name="distance" value="10k">
+                        <label for="distance-10k">10K</label>
+                    </div>
+                    <div class="distance-option">
+                        <input type="radio" id="distance-half" name="distance" value="half">
+                        <label for="distance-half">Half Marathon</label>
+                    </div>
+                    <div class="distance-option">
+                        <input type="radio" id="distance-full" name="distance" value="full">
+                        <label for="distance-full">Full Marathon</label>
+                    </div>
                 </div>
             </div>
+            
 
             <!-- Column 2: Enter Recent Finish Time -->
             <div class="estimator-race-input same-width">
@@ -54,9 +63,9 @@
                 <h2>Estimated Paces</h2>
                 <br>
                 <div id="estimator-race-results-output" class="estimator-race-results">
-                    <p class="result">Estimated VO2 Pace: <span id="vo2-estimate"></span></p>
-                    <p class="result">Estimated LT2 Pace: <span id="lt2-estimate"></span></p>
-                    <p class="result">Estimated LT1 Pace: <span id="lt1-estimate"></span></p>
+                    <p class="result">Estimated VO2 Pace: <span id="vo2-estimate" class="vo2-color"></span></p>
+                    <p class="result">Estimated LT2 Pace: <span id="lt2-estimate" class="lt2-color"></span></p>
+                    <p class="result">Estimated LT1 Pace: <span id="lt1-estimate" class="lt1-color"></span></p>
                 </div>
             </div>
         </div>

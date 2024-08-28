@@ -204,6 +204,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById('vo2-estimate').innerText = secondsToPace(vo2Pace);
                 document.getElementById('lt1-estimate').innerText = secondsToPace(lt1Pace);
                 document.getElementById('lt2-estimate').innerText = secondsToPace(lt2Pace);
+
+                // Update the input fields with the estimated paces
+                document.getElementById('vo2Input').value = secondsToPace(vo2Pace);
+                document.getElementById('lt1Input').value = secondsToPace(lt1Pace);
+                document.getElementById('lt2Input').value = secondsToPace(lt2Pace);
+                
+                // Update sliders to reflect new values
+                document.getElementById('vo2Slider').value = vo2Pace;
+                document.getElementById('lt1Slider').value = lt1Pace;
+                document.getElementById('lt2Slider').value = lt2Pace;
+
+                // Trigger update on the chart and synchronize sliders
+                updateChart();
             } else {
                 console.error('Race distance or time is missing');
             }

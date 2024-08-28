@@ -77,13 +77,24 @@ h2 {
     justify-content: space-between;
 }
 
-.estimator-distance-select, .estimator-race-input {
+.estimator-race-input {
     flex: 1;
     padding: 20px;
     box-sizing: border-box;
     background-color: #ffffff; /* Match background color */
     border-radius: 6px; /* Match border radius */
 }
+
+.estimator-distance-select {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Match background color */
+    border-radius: 6px; /* Match border radius */
+    border: 1px solid #ddd; /* Subtle border for better definition */
+}
+
+
 
 /* Style for a professional-looking button */
 button {
@@ -120,15 +131,26 @@ button:focus {
 
 
 
-/* Style for input-group to ensure elements are aligned */
-.estimator-distance-select-group {
-    margin-bottom: 10px;
-}
-
-/* Style for radio buttons and labels */
 .estimator-distance-select-group {
     display: flex;
-    flex-direction: column; /* Stacks radio items vertically */
+    flex-direction: column; /* Stacks options vertically */
+    gap: 10px; /* Space between each option */
+}
+
+.distance-option {
+    display: flex;
+    align-items: center; /* Aligns radio button and label vertically */
+}
+
+.distance-option input[type="radio"] {
+    margin-right: 10px; /* More space between radio button and label */
+    cursor: pointer; /* Pointer cursor on hover for better UX */
+}
+
+.distance-option label {
+    font-size: 1.1em; /* Slightly larger font size for readability */
+    color: #333; /* Darker text color for better readability */
+    cursor: pointer; /* Pointer cursor on hover for better UX */
 }
 
 /* Style for each radio button and label pair */
@@ -574,4 +596,20 @@ canvas {
     background-color: #ffffff; /* White background for container */
     margin-top: 20px; /* Gap between summary and container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+
+/* Color for VO2 Estimate */
+.vo2-color {
+    color: #d32f2f; /* Red color for VO2 */
+}
+
+/* Color for LT2 Estimate */
+.lt2-color {
+    color: #ff9800; /* Orange color for LT2 */
+}
+
+/* Color for LT1 Estimate */
+.lt1-color {
+    color: #4caf50; /* Green color for LT1 */
 }
