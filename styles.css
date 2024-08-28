@@ -41,13 +41,17 @@ h2 {
 }
 
 .summary {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1200px; /* Maximum width to ensure content doesn't stretch too much */
     padding: 20px;
     box-sizing: border-box;
-    background-color: #ffffff; /* White background for summary */
-    margin-top: 10px; /* Gap between header and summary */
-    border-bottom: 2px solid #ddd; /* Line below the summary */
+    border: 2px solid #ddd; /* Container border */
+    border-radius: 12px; /* Rounded corners */
+    background-color: #ffffff; /* White background for container */
+    margin-top: 20px; /* Gap between summary and container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
     text-align: center;
 }
 
